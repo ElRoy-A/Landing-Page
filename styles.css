@@ -1,0 +1,348 @@
+/* Variable Elements */
+:root {
+    --bg: #FFFFFF;
+    --bg-dark: #1D1F1D;
+    --bg-nav: #353836;
+
+    --border: #B0D2CB;
+
+    --clr-logo: #3882F6;
+    --clr-dark: #1F2937;
+    --clr-light: #F9FAF8;
+}
+
+/* CSS reset */
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default styling */
+body {
+    background-color: var(--bg);
+    color: var(--clr-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Resize images */
+img {
+    width: 100%;
+}
+
+
+/* Navigation Bar styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-nav);
+    height: 50px;
+    padding: 0 20px;
+    border-bottom: 5px solid var(--border);
+}
+header a {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.logo a {
+    color: var(--clr-logo);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    font-size: 0.8rem;
+    margin-right: 20px;
+}
+ul a {
+    color: var(--clr-light);
+}
+ul a:hover {
+    border-bottom: 2px solid var(--clr-logo);
+}
+
+ul li {
+    margin-left: 10px;
+    padding: 10px;
+}
+ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.login {
+    border-radius: 5px;
+    border: 2.5px solid var(--clr-logo);
+    padding: 5px 10px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 40px;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+    ul {
+        font-size: 0.6rem;
+    }
+}
+
+
+/* Hero section styling */
+.hero-section{
+    display:flex;
+    align-items: center;
+    border-bottom: 5px solid var(--border);
+}
+
+.hero-image {
+    flex: 1;
+    padding: 10px;
+}
+.hero-image img {
+    width: 50%;
+    min-width: 200px;
+    border: 5px solid var(--border);
+}
+
+.hero-div {
+    flex: 1;
+    margin: 0 3.5% 0 15%;
+    padding: 10px;
+}
+.hero-div h1 {
+    color: var(--clr-logo);
+    padding-bottom: 10px;
+}
+
+.hero-text {
+    font-size: 0.7rem;
+    padding-bottom: 10px;
+} 
+
+.btn {
+    background-color: var(--clr-logo);
+}
+.form {
+    border: 2px solid var(--clr-logo);
+}
+
+@media screen and (max-width:600px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .btn {
+        margin: 0;
+    }
+    .hero-div {
+        margin: 0;
+    }
+}
+
+
+/* Hobbies section styling */
+.hobbies-section{
+    padding: 20px 0;
+    color: #434343;
+    text-align: center;
+}
+
+.hobbies-h1 {
+    color: var(--clr-logo);
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+    
+}
+  
+.border{
+    background: var(--clr-light);
+    width: 150px;
+    height: 5px;
+    margin: 10px auto;
+}
+  
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.column{
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+}
+.hobby{
+    background: var(--bg-light);
+    padding: 30px;
+    border: 5px solid var(--border);
+}
+.hobby img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: var(--clr-logo);
+    font-weight: bold;
+}
+  
+@media screen and (max-width:600px) {
+  .column{
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* Quote section styling */
+.quote {
+    background-color: var(--bg-quote);
+    color: var(--clr-logo);
+    border: 5px solid var(--border);
+    max-width: 80%;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.quote-text:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.quote-border {
+    border-left-width: 10px;
+}
+
+.quote-text--author {
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+}
+
+.quote-text--author::before {
+    content: "\2014";
+}
+
+.quote-symbol::before {
+    content: "\201c";
+    font-size: 3rem;
+    color: var(--clr-logo);
+    display: block;
+    margin-bottom: -20px;
+    margin-top: -5px;
+}
+
+
+/* Signup styling section */
+.blue-div div {
+    background-color: #3883f6;
+    border-radius: 10px;
+}
+  
+.blue-div div strong {
+    color: white;
+    font-size: 24px;
+}
+
+.blue-div div p {
+    color: white;
+    font-size: 16px;
+}
+  
+  /* blue div */
+.blue-div {
+    height: 300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-light);
+}
+  .blue-div div {
+    display: flex;
+}
+
+.blue-div div .signup-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.blue-div div div {
+    margin: 3rem;
+}
+
+.signup-btn {
+    background-color: var(--clr-logo);
+    border: 1px solid white;
+    border-radius: 7px;
+    color: var(--clr-light);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 25px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .blue-div div {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 300px;
+        margin-top: 50px;
+    }
+}
+
+/* Footer styling */
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: center;
+    background-color: var(--bg-nav);
+    font-size: 0.5rem;
+}
+
+footer span {
+    padding-bottom: 15px;
+}
+
+.hero-secondary {
+    color: white;
+}
+
+@media screen and (max-width:600px) {
+    footer {
+        margin-top: 130px;
+    }
+}
